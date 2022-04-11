@@ -1,7 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgxCsvParser, NgxCSVParserError } from 'ngx-csv-parser';
 import { customPincode, PincodeService } from '../services/pincode.service';
 
 @Component({
@@ -21,8 +20,7 @@ export class PincodeComponent implements OnInit {
   ];
   pincodeList: customPincode[] = []
   constructor(
-    private ngxCsvParser: NgxCsvParser,
-    public $activateRout:ActivatedRoute
+    public $activateRout: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
@@ -30,7 +28,7 @@ export class PincodeComponent implements OnInit {
   }
   // get list of pincode
   getPincodes() {
-    this.pincodeList=this.$activateRout.snapshot.data['data'];
+    this.pincodeList = this.$activateRout.snapshot.data['data'];
     // console.log(data);
     // this.pincodeService.getPincodes().subscribe(
     //   {
@@ -41,25 +39,5 @@ export class PincodeComponent implements OnInit {
     //     error: (err: HttpErrorResponse) => console.error(err),
     //   })
   }
-
-
-  // read csv file
-  // readFile(event: any): void {
-  //   if (event.target.files && event.target.files.length) {
-  //     const [file] = event.target.files;
-  //     this.ngxCsvParser.parse(file, { header: true, delimiter: ',' })
-  //       .pipe().subscribe({
-  //         next: (result): void => {
-  //           console.log('Result', result);
-  //           // this.csvRecords = result;
-  //         },
-  //         error: (error: NgxCSVParserError): void => {
-  //           console.log('Error', error);
-  //         }
-  //       });
-  //   }
-
-
-  // }
 
 }

@@ -5,10 +5,6 @@
         <div class="col-12 mt-2">
           <h1 class="header-center">Pincode</h1>
         </div>
-        <!-- <div class="col-12 mt-2 text-center">
-          <input type="file" accept=".csv" class="file-select" (change)="readFile($event)"
-            placeholder="Profile Picture" formControlName="profilePicture">
-        </div> -->
       </div>
       <div class="row">
         <div class="col-12">
@@ -21,11 +17,7 @@
               </ng-container>
 
               <mat-header-row *matHeaderRowDef="columnsName; sticky: true"></mat-header-row>
-              <!-- <mat-header-row *matHeaderRowDef="displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')"></mat-header-row> -->
-
               <mat-row *matRowDef="let row; columns: columnsName;"></mat-row>
-
-
             </mat-table>
           </div>
         </div>

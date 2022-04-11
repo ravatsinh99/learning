@@ -1,0 +1,35 @@
+<div class="container-md">
+  <mat-card>
+    <mat-card-content>
+      <div class="row mt-2">
+        <div class="col-12 mt-2">
+          <h1 class="header-center">Pincode</h1>
+        </div>
+        <!-- <div class="col-12 mt-2 text-center">
+          <input type="file" accept=".csv" class="file-select" (change)="readFile($event)"
+            placeholder="Profile Picture" formControlName="profilePicture">
+        </div> -->
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="example-container mat-elevation-z8">
+            <mat-table [dataSource]="pincodeList">
+
+              <ng-container [matColumnDef]="column" *ngFor="let column of columnsName">
+                <mat-header-cell *matHeaderCellDef> {{column}} </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element[column]}} </mat-cell>
+              </ng-container>
+
+              <mat-header-row *matHeaderRowDef="columnsName; sticky: true"></mat-header-row>
+              <!-- <mat-header-row *matHeaderRowDef="displayedColumns; sticky: isSticky(stickyHeaders, 'header-2')"></mat-header-row> -->
+
+              <mat-row *matRowDef="let row; columns: columnsName;"></mat-row>
+
+
+            </mat-table>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -8,17 +8,22 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: '/employee'
-  }, {
+  },
+  {
     path: 'employee',
     loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule)
   },
   {
-    path: 'pincode',
-    component: PincodeComponent,
-    resolve: {
-      data: ResolveService
-     }
-  }
+    path: 'ngrx',
+    loadChildren: () => import('./ngrxdemo/ngrxdemo.module').then(m => m.NgrxdemoModule)
+  },
+  // {
+  //   path: 'pincode',
+  //   component: PincodeComponent,
+  //   resolve: {
+  //     data: ResolveService
+  //    }
+  // }
 ];
 
 @NgModule({

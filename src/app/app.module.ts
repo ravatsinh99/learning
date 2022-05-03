@@ -15,6 +15,10 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { ResolveService } from './services/resolve.service';
+import { StoreModule } from '@ngrx/store';
+import { demoReducer } from './ngrxdemo/demo.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -31,10 +35,12 @@ import { ResolveService } from './services/resolve.service';
     MatTableModule,
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    StoreModule.forRoot({details: demoReducer}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [EmployeeService,ResolveService ,
-    { provide: HTTP_INTERCEPTORS, useClass: HeaderinterceptorInterceptor, multi: true }
+    // { provide: HTTP_INTERCEPTORS, useClass: HeaderinterceptorInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

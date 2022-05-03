@@ -1,0 +1,50 @@
+// {
+//   "workbench.colorCustomizations": {
+//       "editor.background": "#000000",
+//       "sideBar.background": "#c00000",
+//       "panel.background": "#ff0808",
+//       "activityBar.background": "#09c5c5",
+//       "editorGroupHeader.tabsBackground": "#00132D",
+//       "tab.inactiveBackground": "#eb8d8d",
+//       "tab.activeBackground": "#056fb6",
+//       "tab.activeBorder": "#be0202",
+//       "breadcrumb.background": "#8d0886",
+//       "statusBar.background": "#1fad02",
+//       "sideBar.border": "#103050",
+//       "titleBar.border": "#103050",
+//       "statusBar.border": "#103050",
+//       "menu.border": "#103050",
+//       "contrastBorder": "#103050",
+//       "panel.border": "#103050",
+//       "editorRuler.foreground": "#103050",
+//       "tab.border": "#103050",
+//       "tab.lastPinnedBorder": "#103050",
+//       "activityBar.border": "#103050",
+//   },
+
+//   "editor.tokenColorCustomizations": [
+//       {
+//           "scope": "punctuation",
+//           "settings": {
+//               "foreground": "#C4C4C4",
+//               "fontStyle": ""
+//           }
+//       },
+
+//       {
+//           "scope": "comment",
+//           "settings": {
+//               "foreground": "#246488",
+//               "fontStyle": ""
+//           }
+//       },
+
+//       {
+//           "scope": "string",
+//           "settings": {
+//               "foreground": "#98DAF4",
+//               "fontStyle": ""
+//           }
+//       },
+//   ]
+// }
